@@ -11,6 +11,16 @@
     <div>
         <h1>My flask app</h1>
         <h2>Welcome {{user_name}}</h2>
+
+        <!-- jinjaa template -->
+        <h3>My Skills : </h3>
+        {% for skill in skills %}
+        <li>{{skill}}</li>
+        {% endfor %}
+
+        <p>Father of creator : {{info.father}}</p>
+        <p>Age of creator : {{info.age}}</p>
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil saepe tempore, autem animi, molestiae aspernatur corporis perspiciatis incidunt voluptatum dicta recusandae dolores, quisquam magnam! Molestias fuga in corrupti et corporis.</p>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem officia impedit ipsa minus, fuga provident magnam pariatur cum vel quibusdam libero est non, culpa tempora deserunt dicta rem? Facere similique porro iste ipsum optio ullam ipsam reiciendis, asperiores, molestias modi tempora fugiat unde itaque!
