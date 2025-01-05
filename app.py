@@ -6,9 +6,9 @@ from flask import Flask,render_template
 app = Flask(__name__)
 
 @app.route('/')
-@app.route('/index')
-def index():
-    return render_template('index.html')
+@app.route('/index/<name>')
+def index(name):
+    return render_template('index.html',user_name = name)
 
 
 
