@@ -9,8 +9,10 @@ app = Flask(__name__)
 @app.route('/index/<name>')
 def index(name):
     skills = ['python','Flask','Django']
+    courses = ['Python','C++','C#','JAVA']
     info = {'father' : 'Rajkumar', 'age' : 23, 'city' : 'Chennai'}
-    return render_template('index.html',user_name = name, skills = skills , info = info)
+    is_logged_in = True;
+    return render_template( 'index.html',user_name = name, skills = skills , info = info, courses = courses, logged_in = is_logged_in )
 
 
 
