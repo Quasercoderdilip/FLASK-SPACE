@@ -23,8 +23,7 @@ def index(name):
 
 # @app.route('/contact')
 
-# def contact():
-#     return '<h1> The contact page </h1>'
+
 
 
 @app.route('/path/<username>')
