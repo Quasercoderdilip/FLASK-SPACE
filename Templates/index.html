@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>My Blog</title>
     <!-- <link rel="stylesheet" href="./index.css"> -->
 </head>
 <body>
@@ -26,13 +26,18 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem officia impedit ipsa minus, fuga provident magnam pariatur cum vel quibusdam libero est non, culpa tempora deserunt dicta rem? Facere similique porro iste ipsum optio ullam ipsam reiciendis, asperiores, molestias modi tempora fugiat unde itaque!
         </p>
 
+        {% if logged_in %}
+
         <h3>List of courses : </h3>
 
         {% for course in courses %}
         <li>{{course}}</li>
         {% endfor %}
-
         
+        {% else %}
+        <h4>please log in to see courses</h4>
+        {% endif %}
+
     </div>
     <!-- <div id="calculator">
         <input id="display" readonly />
