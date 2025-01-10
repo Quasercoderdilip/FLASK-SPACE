@@ -11,7 +11,9 @@ def calculate_expression(expression):
     except:
         return 'ERROR'
 
+
 @app.route('/')
+@app.route('/home')
 def home():
     return render_template('calculator.html')
 
