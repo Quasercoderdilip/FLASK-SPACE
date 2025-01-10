@@ -25,5 +25,12 @@ def calculate():
     
     return render_template('calculator.html', expression=expression, result=result)
 
+
+@app.route('/reset', methods=['POST'])
+def reset():
+    return render_template('calculator.html', expression = '', result = '')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)

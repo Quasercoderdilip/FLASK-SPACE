@@ -10,7 +10,7 @@
 <body>
 
     <!-- <div id="calculator">
-        <input id="display" readonly />
+        <input id="display" readonly  value = "{{expression or ''}}" />
         <div id="keys">
             <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
             <button onclick="appendToDisplay('7')">7</button>
@@ -44,6 +44,11 @@
         <input type="text" name="expression" id="display" value="{{ expression or '' }}" required>
         <button type="submit">Calculate</button>
     </form>
+    <form action="/reset" method="POST">
+        <button type="submit" class="reset_button">Reset</button>
+    </form>
+    
+
 
     <h2>Result: {{ result or '' }}</h2>
 

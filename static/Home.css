@@ -90,7 +90,7 @@ h1 {
 
 form {
     background: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -111,7 +111,7 @@ form {
 button {
     width: 100%;
     padding: 15px;
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
     font-size: 18px;
     border: none;
@@ -121,6 +121,22 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+.reset_button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 14px;
+    background-color: #000000;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset_button:hover {
+    background-color: #ff0000;
 }
 
 /* Result styling */
