@@ -13,9 +13,18 @@ def calculate_expression(expression):
 
 
 @app.route('/')
+@app.route('/calculator')
 @app.route('/home')
+@app.route('/index')
 def home():
-    return render_template('calculator.html')
+    data = { 
+        'name':'Dilip kumar',
+        'age' : 24, 
+        'role' : 'Web developer',
+        'E-mail' : 'dilipkumarrajkumar.1101@gmail.com' 
+        } 
+    
+    return render_template('calculator.html', data = data)
 
 @app.route('/calculate', methods=['POST'])
 def calculate():

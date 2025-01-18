@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info page</title>
-</head>
-<body>
+{% extends 'Layout.html' %}
+{% block Title %} Info page {% endblock %}
+
+
+{% block body %}
     <h1>Info page</h1>
-    <ul>
-        {% for i in seq %}
-        <li>{{i}}</li>
-        {% endfor%}
-    </ul>
-</body>
-</html>
+        <ul>
+            {% for i in seq %}
+            <li>{{i}}</li>
+            {% endfor %}
+        </ul>
+{% endblock %}
