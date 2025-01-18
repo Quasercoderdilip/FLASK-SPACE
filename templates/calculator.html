@@ -12,8 +12,18 @@
             <button type="submit" class="reset_button">Reset</button>
         </form>
         
-
         <h2>Result :  {{ result or '' }}</h2>
+
+        {#
+        <ul>
+            {% for key,value in data.items %}
+                <li>{{key}} : {{value}}</li>
+            {% endfor %}
+        </ul>
+        #}
+
+
+
     {% endblock %}
 
     
