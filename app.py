@@ -32,6 +32,11 @@ def calculate():
 def reset():
     return render_template('calculator.html', expression = '', result = '')
 
+@app.route('/info')
+def info():
+    seq = ['apple','banana','orange','pomo']
+    return render_template('info.html',seq = seq)
+
 
 
 if __name__ == '__main__':
