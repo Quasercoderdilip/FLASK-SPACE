@@ -1,52 +1,13 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
+import os
+
+
 
 app = Flask(__name__)
 
-# Function to handle the calculation
-def calculate_expression(expression):
-    try:
-        # Use eval to calculate the result of the expression
-        result = eval(expression)
-        return result
-    except:
-        return 'ERROR'
-
-
-@app.route('/')
-@app.route('/calculator')
-@app.route('/home')
-@app.route('/index')
-def home():
-    data = { 
-        'name':'Dilip kumar',
-        'age' : 24, 
-        'role' : 'Web developer',
-        'E-mail' : 'dilipkumarrajkumar.1101@gmail.com' 
-        } 
-    
-    return render_template('calculator.html', data = data)
-
-@app.route('/calculate', methods=['POST'])
-def calculate():
-    # Get the expression from the POST request
-    expression = request.form.get('expression')
-    
-    # Calculate the result
-    result = calculate_expression(expression)
-    
-    return render_template('calculator.html', expression=expression, result=result)
-
-
-@app.route('/reset', methods=['POST'])
-def reset():
-    return render_template('calculator.html', expression = '', result = '')
-
-@app.route('/info')
-def info():
-    seq = ['apple','banana','orange','pomo']
-    return render_template('info.html',seq = seq)
-
-
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    debug = True
+
